@@ -1,0 +1,6 @@
+#!/bin/sh
+
+TASK_ID=$(awk -F. '{print $1}' .TASK_ID)
+
+qdel $TASK_ID
+rm -f .TASK_ID

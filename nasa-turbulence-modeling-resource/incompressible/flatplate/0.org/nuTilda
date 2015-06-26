@@ -1,0 +1,56 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.3.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      nuTilda;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+#include "include/initialConditions"
+
+dimensions      [0 2 -1 0 0 0 0];
+
+internalField   uniform $internalNuTilda;
+
+boundaryField
+{
+    #include "include/frontAndBackPatches"
+
+    #include "include/symmetryPatch"
+
+    inlet
+    {
+        type            fixedValue;
+        value           uniform $freestreamNuTilda;
+    }
+
+    outlet
+    {
+        type            inletOutlet;
+        inletValue      uniform $freestreamNuTilda;
+        value           uniform $freestreamNuTilda;
+    }
+
+    plate
+    {
+        type            fixedValue;
+        value           uniform 0;
+    }
+
+    atmosphere
+    {
+        type            inletOutlet;
+        inletValue      uniform $freestreamNuTilda;
+        value           uniform $freestreamNuTilda;
+    }
+}
+
+// ************************************************************************* //

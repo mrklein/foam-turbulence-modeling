@@ -1,0 +1,4 @@
+#!/bin/sh
+
+qsub flatplate.job > .TASK_ID
+

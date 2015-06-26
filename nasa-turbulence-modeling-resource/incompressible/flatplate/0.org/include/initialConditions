@@ -1,0 +1,32 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.3.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+
+freestreamVelocity		    (66.26 0 0);
+freestreamVelocityV		    (0 0 66.26);
+
+inletPressure			    102828;
+internalPressure		    1e5;
+outletPressure			    1e5;
+
+inletTemperature		    302.4;
+internalTemperature		    300;
+
+internalTKE                 0;
+inletTKE                    0;
+
+internalTurbulentEpsilon    1;
+inletTurbulentEpsilon       0;
+
+inletNuTilda                3e-5; // 9.0;
+internalNuTilda             3e-5; // 9.0;
+freestreamNuTilda           3e-5; // 9.0;
+
+#inputMode           		merge
+
+// ************************************************************************* //
+// vim: set ft=openfoam:

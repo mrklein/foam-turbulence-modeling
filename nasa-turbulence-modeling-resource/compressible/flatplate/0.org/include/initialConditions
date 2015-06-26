@@ -1,0 +1,25 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.3.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+
+U_farfield                  (69.3850983013 0 0);
+
+p_inlet                     102828;
+p_internal                  1e5;
+p_outlet                    1e5;
+
+T_inlet                     302.4;
+T_internal                  300;
+
+nut_inlet                   4.8351375784e-05;
+nut_internal                1.61171252613e-05;
+nut_farfield                1.61171252613e-05;
+
+#inputMode merge
+
+// ************************************************************************* //
+// vim: set ft=openfoam:
